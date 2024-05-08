@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+    <title>Security Header Checker</title>
+</head>
+<body>
+    <div class="container">
+        <form action="/check_security" method="post">
+            <label for="urls">Enter URLs (comma seperated):</label>
+            <textarea id="urls" name="urls" rows="4" cols="50"></textarea>
+            <br>
+            <input type="submit" value="check Security Headers">
+        </form>
+    </div>
+</body>
+</html>

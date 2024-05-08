@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Security Header Check Results</title>
+    <!-- Add any necessary CSS styles here -->
+</head>
+<body>
+    <h1>Security Header Check Results</h1>
+
+    <table border="1">
+        <tr>
+            <th>URL</th>
+            <th>Results</th>
+        </tr>
+        {% for result in results %}
+        <tr>
+            <td>{{ result.url }}</td>
+            <td>
+                <ul>
+                    {% for header in result.results %}
+                    <li>{{ header }}</li>
+                    {% endfor %}
+                </ul>
+            </td>
+        </tr>
+        {% endfor %}
+    </table>
+</body>
+</html>
